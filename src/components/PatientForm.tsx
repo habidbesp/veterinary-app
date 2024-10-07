@@ -1,15 +1,16 @@
 import { useForm } from "react-hook-form";
 import Error from "./Error";
+import { DraftPatient } from "../types";
 
 export default function PatientForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<DraftPatient>();
 
-  const registerPatient = () => {
-    console.log("new Patient");
+  const registerPatient = (data: DraftPatient) => {
+    console.log(data);
   };
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
@@ -36,7 +37,7 @@ export default function PatientForm() {
             placeholder="Patient Name"
             {...register("name", { required: "Patient name is required" })}
           />
-          {errors.name && <Error>{errors.name?.message?.toString()}</Error>}
+          {errors.name && <Error>{errors.name?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -52,9 +53,7 @@ export default function PatientForm() {
               required: "Pet Owner's name is required",
             })}
           />
-          {errors.caretaker && (
-            <Error>{errors.caretaker?.message?.toString()}</Error>
-          )}
+          {errors.caretaker && <Error>{errors.caretaker?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -74,7 +73,7 @@ export default function PatientForm() {
               },
             })}
           />
-          {errors.email && <Error>{errors.email?.message?.toString()}</Error>}
+          {errors.email && <Error>{errors.email?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -89,7 +88,7 @@ export default function PatientForm() {
               required: "Date of Admission is required",
             })}
           />
-          {errors.date && <Error>{errors.date?.message?.toString()}</Error>}
+          {errors.date && <Error>{errors.date?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -104,9 +103,7 @@ export default function PatientForm() {
               required: "Symptoms are required",
             })}
           />
-          {errors.symptoms && (
-            <Error>{errors.symptoms?.message?.toString()}</Error>
-          )}
+          {errors.symptoms && <Error>{errors.symptoms?.message}</Error>}
         </div>
 
         <input

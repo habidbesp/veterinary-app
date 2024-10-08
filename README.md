@@ -4,7 +4,7 @@ In Veterinary App, you can enter your pet's information, as well as a descriptio
 
 ## Live Demo
 
-You can check out the live version of the Expense Manager app deployed on Vercel by clicking the link below:
+You can check out the live version of the Veterinary App deployed on Vercel by clicking the link below:
 
 [Veterinary App - Live Demo](https://patients-zustand-tau.vercel.app/)
 

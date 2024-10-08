@@ -2,6 +2,12 @@
 
 In Veterinary App, you can enter your pet's information, as well as a description of their symptoms. This information will help track the health of your beloved companion, facilitating better veterinary care and more effective monitoring of their well-being.
 
+## Live Demo
+
+You can check out the live version of the Expense Manager app deployed on Vercel by clicking the link below:
+
+[Veterinary App - Live Demo](https://patients-zustand-tau.vercel.app/)
+
 ## Features
 
 - Enter your pet's information and symptoms in a form.
@@ -16,6 +22,7 @@ The project was developed using:
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
 - **Zustand**: A lightweight state management library for React that simplifies global state management using hooks.
 - **Tailwind CSS**: A utility-first CSS framework for styling.
+- **React Toastify**: A library for displaying customizable toast notifications in React applications.
 
 ## How to Run the Project
 
